@@ -8,14 +8,34 @@ a:hover {
   color: #535bf2;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Space Grotesk", serif;
+}
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 60px;
   margin-bottom: 0;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 p {
   margin: 0;
+  font-size: 18px;
 }
 
 li {
@@ -24,13 +44,16 @@ li {
 
 ul {
   display: flex;
-  flex-direction: column;
   padding: 0;
   gap: 4px;
 }
 
 button {
   border: 1px solid;
-  padding: 8px;
+  padding: 20px 35px;
   cursor: pointer;
+}
+
+.pageContainer {
+  padding: 60px 100px 0px;
 }
