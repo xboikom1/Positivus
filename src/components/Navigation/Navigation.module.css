@@ -1,8 +1,48 @@
 .navList {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 .navContainer {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 220px;
+    padding: 10px 0;
+
+}
+
+.navLink {
+    padding: 20px 0;
+    transition: color 250ms linear;
+}
+
+.navLink:focus,
+.navLink:hover {
+    color: var(--green);
+}
+
+.requestBtn {
+    border: 1px solid var(--dark);
+    border-radius: 14px;
+    padding: 20px 35px;
+    min-width: 231px;
+    height: 68px;
+    background-color: white;
+    transition: color 250ms linear, background-color 250ms linear;
+}
+
+.requestBtn:hover,
+.requestBtn:focus {
+    color: var(--green);
+    background-color: var(--dark);
 }

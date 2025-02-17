@@ -12,25 +12,37 @@ const Navigation = () => {
         >
           <use href="/src/images/icons/sprite.svg#icon-star"></use>
         </svg>
-        <h1>Positivus</h1>
+        <h2 className={css.logoText}>Positivus</h2>
       </a>
       <ul className={css.navList}>
-        <li>
-          <a href="#about-us">About us</a>
+        <li className={css.navListItem}>
+          <a href="#about-us" className={css.navLink}>
+            About us
+          </a>
         </li>
-        <li>
-          <a href="#services">Services</a>
+        <li className={css.navListItem}>
+          <a href="#services" className={css.navLink}>
+            Services
+          </a>
         </li>
-        <li>
-          <a href="">Use Cases</a>
+        <li className={css.navListItem}>
+          <a href="" className={css.navLink}>
+            Use Cases
+          </a>
         </li>
-        <li>
-          <a href="">Prices</a>
+        <li className={css.navListItem}>
+          <a href="" className={css.navLink}>
+            Prices
+          </a>
         </li>
-        <li>
-          <a href="">Blog</a>
+        <li className={css.navListItem}>
+          <a href="" className={css.navLink}>
+            Blog
+          </a>
         </li>
-        <button>Request a quote</button>
+        <button type="button" className={css.requestBtn}>
+          Request a quote
+        </button>
       </ul>
     </nav>
   );

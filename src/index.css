@@ -1,6 +1,14 @@
+:root {
+  --green: #b9ff66;
+  --grey: #f3f3f3;
+  --dark: #191a23;
+  --black: #000;
+}
+
 a {
   font-weight: 500;
   text-decoration: inherit;
+  color: black;
 }
 
 h1,
@@ -16,7 +24,6 @@ p {
 
 h1 {
   font-size: 60px;
-  margin-bottom: 0;
 }
 
 h2 {
@@ -27,12 +34,11 @@ h3 {
   font-size: 30px;
 }
 
-h2 {
+h4 {
   font-size: 20px;
 }
 
 p {
-  margin: 0;
   font-size: 18px;
 }
 
@@ -41,6 +47,7 @@ li {
 }
 
 ul {
+  margin: 0;
   display: flex;
   padding: 0;
   gap: 4px;
