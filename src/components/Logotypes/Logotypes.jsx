@@ -6,7 +6,7 @@ const Logotypes = () => {
       <li className={css.linkListItem}>
         <a className={css.link} href="https://www.amazon.com" target="blank">
           <svg
-            className="logo-icon"
+            className={css.logoIcon}
             width="124px"
             height="48px"
             aria-label="Amazon logo"
@@ -18,7 +18,7 @@ const Logotypes = () => {
       <li className={css.linkListItem}>
         <a className={css.link} href="https://dribbble.com" target="blank">
           <svg
-            className="logo-icon"
+            className={css.logoIcon}
             width="128px"
             height="48px"
             aria-label="Dribble logo"
@@ -30,7 +30,7 @@ const Logotypes = () => {
       <li className={css.linkListItem}>
         <a className={css.link} href="https://www.hubspot.com" target="blank">
           <svg
-            className="logo-icon"
+            className={css.logoIcon}
             width="124px"
             height="48px"
             aria-label="Hubspot logo"
@@ -40,38 +40,42 @@ const Logotypes = () => {
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="./index.html" target="blank">
+        <a className={css.link} href="https://www.notion.com" target="blank">
           <svg
-            className="logo-icon"
-            width="124px"
+            className={css.logoIcon}
+            width="148px"
             height="48px"
-            aria-label="Positivus logo"
+            aria-label="Notion logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-amazon"></use>
+            <use href="/src/images/icons/sprite.svg#icon-notion"></use>
           </svg>
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="./index.html" target="blank">
+        <a
+          className={css.link}
+          href="https://www.netflix.com/browse"
+          target="blank"
+        >
           <svg
-            className="logo-icon"
+            className={css.logoIcon}
             width="124px"
             height="48px"
-            aria-label="Positivus logo"
+            aria-label="Netflix logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-amazon"></use>
+            <use href="/src/images/icons/sprite.svg#icon-netflix"></use>
           </svg>
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="./index.html" target="blank">
+        <a className={css.link} href="https://www.zoom.com" target="blank">
           <svg
-            className="logo-icon"
-            width="124px"
+            className={css.logoIcon}
+            width="112px"
             height="48px"
-            aria-label="Positivus logo"
+            aria-label="Zoom logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-amazon"></use>
+            <use href="/src/images/icons/sprite.svg#icon-zoom"></use>
           </svg>
         </a>
       </li>

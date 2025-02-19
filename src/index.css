@@ -60,5 +60,9 @@ button {
 }
 
 .pageContainer {
-  padding: 60px 100px 0px;
+  padding: 0 100px;
+}
+
+.section {
+  padding: 70px 0;
 }

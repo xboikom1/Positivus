@@ -1,4 +1,5 @@
 import Hero from './components/Hero/Hero';
+import Services from './components/Services/Services';
 
 const App = () => {
   return (
@@ -6,6 +7,9 @@ const App = () => {
       <header>
         <Hero />
       </header>
+      <main>
+        <Services />
+      </main>
     </div>
   );
 };
