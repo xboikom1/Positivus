@@ -1,1 +1,36 @@
-.nav{}
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.textContainer {
+    max-width: 532px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.bookBtn {
+    border-radius: 14px;
+    padding: 20px 35px;
+    width: 264px;
+    height: 68px;
+    background: var(--dark);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #fff;
+}
