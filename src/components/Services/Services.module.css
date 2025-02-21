@@ -18,6 +18,82 @@
 .cardListItem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 50px;
     width: calc((100% - 40px) / 2);
+    box-shadow: 0 5px 0 0 var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 45px;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+    justify-content: space-between;
+}
+
+.cardTitle {
+    display: block;
+    width: fit-content;
+    border-radius: 7px;
+    padding: 0px 7px;
+}
+
+.cardLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrowIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 12px;
+}
+
+.cardListItem:nth-child(3n+1) {
+    background: var(--grey);
+}
+
+.cardListItem:nth-child(3n+1) .cardTitle {
+    background-color: var(--green);
+}
+
+.cardListItem:nth-child(3n+1) .arrowIcon {
+    background-color: black;
+    fill: var(--green);
+}
+
+.cardListItem:nth-child(3n+2) {
+    background: var(--green);
+}
+
+.cardListItem:nth-child(3n+2) .cardTitle {
+    background-color: white;
+}
+
+.cardListItem:nth-child(3n+2) .arrowIcon {
+    background-color: black;
+    fill: var(--green);
+}
+
+.cardListItem:nth-child(3n) {
+    background: var(--dark);
+}
+
+.cardListItem:nth-child(3n) .cardTitle {
+    background-color: white;
+}
+
+.cardListItem:nth-child(3n) .arrowIcon {
+    background-color: white;
+    fill: black;
+}
+
+.cardListItem:nth-child(3n) .linkText {
+    color: white;
 }

@@ -33,4 +33,10 @@
     line-height: 140%;
     text-align: center;
     color: #fff;
+    transition: color 250ms linear;
+}
+
+.bookBtn:hover,
+.bookBtn:focus {
+    color: var(--green);
 }
