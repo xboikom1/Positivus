@@ -1,0 +1,23 @@
+.title {
+    font-weight: 500;
+    background-color: var(--green);
+}
+
+.titleText {
+    display: block;
+    max-width: 580px;
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.cardListItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: calc((100% - 40px) / 2);
+}
