@@ -1,0 +1,34 @@
+.sectionContainer {
+    border-radius: 45px;
+    padding: 60px;
+    background-color: var(--grey);
+    position: relative;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    max-width: 500px;
+}
+
+.btn {
+    border-radius: 14px;
+    padding: 20px 35px;
+    width: 288px;
+    height: 68px;
+    background-color: var(--dark);
+    color: white;
+    transition: color 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--green);
+}
+
+.image {
+    position: absolute;
+    right: 0;
+    top: -24px;
+}
