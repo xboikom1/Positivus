@@ -1,0 +1,35 @@
+/* .accordionItemContainer {
+    border: 1px solid var(--dark);
+    border-radius: 45px;
+    padding: 41px 60px;
+    box-shadow: 0 5px 0 0 var(--dark);
+    background-color: var(--green);
+    padding: 42px 60px;
+}
+
+.accordionHeader {
+    display: flex;
+    gap: 25px;
+    color: var(--black);
+} */
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem {
+    border: 1px solid var(--dark);
+    border-radius: 45px;
+    padding: 41px 60px;
+    box-shadow: 0 5px 0 0 var(--dark);
+    background-color: var(--green);
+    padding: 42px 60px;
+}
+
+.titleBtn {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
