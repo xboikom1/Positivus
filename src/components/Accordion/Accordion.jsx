@@ -1,54 +1,108 @@
-import { useEffect, useRef } from 'react';
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-import clsx from 'clsx';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary, {
+  accordionSummaryClasses,
+} from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 import css from './Accordion.module.css';
 
-const Accordion_Component = () => {
-  const accordionLi = document.querySelectorAll('.accordion');
+const Accordion = styled(props => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+  '&:not(:last-child)': {
+    borderBottom: 0,
+  },
+  '&::before': {
+    display: 'none',
+  },
+}));
 
-  accordionLi.forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
-    });
-  });
-  const accordionRef = useRef(null);
-  useEffect(() => {
-    if (!accordionRef.current) {
-      accordionRef.current = new Accordion('.accordion-container', {
-        openOnInit: [0],
-      });
-    }
-  }, []);
+const AccordionSummary = styled(props => (
+  <MuiAccordionSummary
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    {...props}
+  />
+))(({ theme }) => ({
+  backgroundColor: 'rgba(0, 0, 0, .03)',
+  flexDirection: 'row-reverse',
+  [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]:
+    {
+      transform: 'rotate(90deg)',
+    },
+  [`& .${accordionSummaryClasses.content}`]: {
+    marginLeft: theme.spacing(1),
+  },
+  ...theme.applyStyles('dark', {
+    backgroundColor: 'rgba(255, 255, 255, .05)',
+  }),
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
+
+export default function CustomizedAccordions() {
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = panel => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
-    <div className="accordion-container">
-      <ul class={css.list}>
-        <li class={clsx('accordion', 'first', css.listItem)}>
-          <div class={css.titleBtn}>
-            <h3 class={css.listTitle}>
-              <span>01</span> Consultation
-            </h3>
-            <button class={css.btnIcon} aria-label="open more information">
-              <svg class="faq-svg-icon" width="20" height="20">
-                <use
-                  class="faq-use"
-                  href="./img/faq/arrow.svg#icon-Iconarrow1"
-                ></use>
-              </svg>
-            </button>
-          </div>
-          <div class="faq-text-wrap">
-            <p class="faq-list-item-text first-text">
-              In the field of web development, there are various technologies
-              and programming languages. Typically, this includes a combination
-              of frontend (client side) and backend (server side) languages.
-            </p>
-          </div>
-        </li>
-      </ul>
+    <div>
+      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography component="span">Collapsible Group Item #1</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+            lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+          <Typography component="span">Collapsible Group Item #2</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+            lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+          <Typography component="span">Collapsible Group Item #3</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+            lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
-};
-
-export default Accordion_Component;
+}

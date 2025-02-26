@@ -1,35 +1,63 @@
-/* .accordionItemContainer {
+.accordionList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.listItem {
     border: 1px solid var(--dark);
-    border-radius: 45px;
+    border-radius: 45px !important;
     padding: 41px 60px;
-    box-shadow: 0 5px 0 0 var(--dark);
-    background-color: var(--green);
-    padding: 42px 60px;
+    box-shadow: 0 5px 0 0 var(--dark) !important;
+    background-color: var(--grey) !important;
+    margin: 0 !important;
+    transition: background-color 250ms linear;
+}
+
+.listItem.Mui-expanded {
+    background-color: var(--green) !important;
+}
+
+.listItem::before {
+    display: none;
+}
+
+.listTitle {
+    display: flex;
+    align-items: center;
+}
+
+.titleNumber {
+    font-size: 60px;
+    margin-right: 25px;
 }
 
 .accordionHeader {
     display: flex;
     gap: 25px;
     color: var(--black);
-} */
-
-.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.listItem {
-    border: 1px solid var(--dark);
-    border-radius: 45px;
-    padding: 41px 60px;
-    box-shadow: 0 5px 0 0 var(--dark);
-    background-color: var(--green);
-    padding: 42px 60px;
 }
 
 .titleBtn {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
-    padding-bottom: 16px;
+
+}
+
+.svgIcon {
+    fill: var(--black);
+    stroke-width: 1px;
+}
+
+.svgIcon::after {
+    content: "";
+}
+
+.btnIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 20px;
+    border-radius: 100%;
 }

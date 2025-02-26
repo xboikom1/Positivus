@@ -1,5 +1,5 @@
 import css from './Working Process.module.css';
-import Accordion_Component from '../Accordion/Accordion';
+import AccordionExpandDefault from '../Accordion/Accordion';
 
 const Working_Process = () => {
   return (
@@ -10,7 +10,7 @@ const Working_Process = () => {
           Step-by-Step Guide to Achieving Your Business Goals
         </p>
       </div>
-      <Accordion_Component />
+      <AccordionExpandDefault />
     </section>
   );
 };
