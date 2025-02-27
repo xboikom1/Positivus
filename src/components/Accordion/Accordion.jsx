@@ -1,105 +1,177 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary, {
-  accordionSummaryClasses,
-} from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
+import SvgIcon from '@mui/material/SvgIcon';
+import clsx from 'clsx';
 import css from './Accordion.module.css';
 
-const Accordion = styled(props => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  '&:not(:last-child)': {
-    borderBottom: 0,
-  },
-  '&::before': {
-    display: 'none',
-  },
-}));
+function ExpandIcon({ expanded }) {
+  return (
+    <SvgIcon>
+      {expanded ? (
+        <svg aria-label="close icon" className={css.svgIcon}>
+          <use href="/src/images/icons/sprite.svg#icon-minus"></use>
+        </svg>
+      ) : (
+        <svg aria-label="open icon" className={css.svgIcon}>
+          <use href="/src/images/icons/sprite.svg#icon-plus"></use>
+        </svg>
+      )}
+    </SvgIcon>
+  );
+}
 
-const AccordionSummary = styled(props => (
-  <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-    {...props}
-  />
-))(({ theme }) => ({
-  backgroundColor: 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row-reverse',
-  [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]:
-    {
-      transform: 'rotate(90deg)',
-    },
-  [`& .${accordionSummaryClasses.content}`]: {
-    marginLeft: theme.spacing(1),
-  },
-  ...theme.applyStyles('dark', {
-    backgroundColor: 'rgba(255, 255, 255, .05)',
-  }),
-}));
+export default function ControlledAccordions() {
+  const [expanded, setExpanded] = React.useState(false);
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
-
-export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState('panel1');
-
-  const handleChange = panel => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
+  const handleChange = panel => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
   };
 
   return (
-    <div>
+    <div className={css.accordionList}>
       <Accordion
+        className={clsx(css.listItem, expanded === 'panel1' && css.expanded)}
         expanded={expanded === 'panel1'}
         onChange={handleChange('panel1')}
       >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography component="span">Collapsible Group Item #1</Typography>
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel1'} />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            01 <span className={css.titleText}>Consultation</span>
+          </h1>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
+          <Typography className={css.accordionInfo}>
+            During the initial consultation, we will discuss your business goals
+            and objectives, target audience, and current marketing efforts. This
+            will allow us to understand your needs and tailor our services to
+            best fit your requirements.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
+        className={clsx(css.listItem, expanded === 'panel2' && css.expanded)}
         expanded={expanded === 'panel2'}
         onChange={handleChange('panel2')}
       >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography component="span">Collapsible Group Item #2</Typography>
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel2'} />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            02
+            <span className={css.titleText}>
+              Research and Strategy Development
+            </span>
+          </h1>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
+          <Typography className={css.accordionInfo}>
+            In this phase, we will conduct thorough research and analysis to
+            understand the market, competitors, and target audience. We will
+            develop a comprehensive strategy that aligns with your business
+            goals and objectives.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
+        className={clsx(css.listItem, expanded === 'panel3' && css.expanded)}
         expanded={expanded === 'panel3'}
         onChange={handleChange('panel3')}
       >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography component="span">Collapsible Group Item #3</Typography>
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel3'} />}
+          aria-controls="panel3bh-content"
+          id="panel3bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            03 <span className={css.titleText}>Implementation</span>
+          </h1>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
+          <Typography className={css.accordionInfo}>
+            During the implementation phase, we will execute the strategy by
+            developing and deploying the necessary solutions. This includes
+            designing, coding, and integrating systems to achieve the desired
+            outcomes.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        className={clsx(css.listItem, expanded === 'panel4' && css.expanded)}
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel4'} />}
+          aria-controls="panel4bh-content"
+          id="panel4bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            04
+            <span className={css.titleText}>Monitoring and Optimization</span>
+          </h1>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={css.accordionInfo}>
+            In this phase, we will continuously monitor the performance of the
+            deployed solutions. We will analyze data, identify areas for
+            improvement, and optimize processes to ensure maximum efficiency and
+            effectiveness.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        className={clsx(css.listItem, expanded === 'panel5' && css.expanded)}
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel5'} />}
+          aria-controls="panel5bh-content"
+          id="panel5bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            05
+            <span className={css.titleText}>Reporting and Communication</span>
+          </h1>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={css.accordionInfo}>
+            During this phase, we will provide regular reports and updates on
+            the progress and performance of the implemented solutions. We will
+            maintain clear and open communication to keep you informed and
+            involved throughout the process.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        className={clsx(css.listItem, expanded === 'panel6' && css.expanded)}
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandIcon expanded={expanded === 'panel6'} />}
+          aria-controls="panel6bh-content"
+          id="panel6bh-header"
+        >
+          <h1 className={css.listItemTitle}>
+            06 <span className={css.titleText}>Continual Improvement</span>
+          </h1>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={css.accordionInfo}>
+            In the final phase, we focus on continual improvement by gathering
+            feedback, analyzing results, and making necessary adjustments. Our
+            goal is to ensure that the solutions continue to meet your evolving
+            business needs and deliver sustainable success.
           </Typography>
         </AccordionDetails>
       </Accordion>

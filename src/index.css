@@ -87,17 +87,3 @@ button {
   gap: 40px;
   margin-bottom: 80px;
 }
-
-.ac-panel {
-  max-height: 0;
-  /* Скрыть панели по умолчанию */
-  overflow: hidden;
-  /* Скрыть переполнение */
-  transition: max-height 0.3s ease;
-  /* Плавная анимация */
-}
-
-.ac-panel.ac-active {
-  max-height: 200px;
-  /* Установите максимальную высоту для открытого состояния */
-}
