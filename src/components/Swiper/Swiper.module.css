@@ -61,3 +61,26 @@
 .swiperButtonNext {
     right: 35%;
 }
+
+.customPagination {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.customBullet {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customBullet.swiper-pagination-bullet-active {
+    fill: var(--green);
+}

@@ -24,7 +24,15 @@ export default () => {
           nextEl: `.${css.swiperButtonNext}`,
           prevEl: `.${css.swiperButtonPrev}`,
         }}
-        pagination={{ clickable: true }}
+        pagination={{
+          el: `.${css.customPagination}`,
+          clickable: true,
+          renderBullet: (index, className) => {
+            return `<svg class="${className} ${css.customBullet}" aria-label="pagination bullet">
+                      <use href="/src/images/icons/sprite.svg#icon-star"></use>
+                    </svg>`;
+          },
+        }}
         className={css.swiperWrapper}
       >
         <SwiperSlide className={clsx(css.swiperContainer, css.swiperSlide)}>
@@ -100,13 +108,14 @@ export default () => {
         </SwiperSlide>
       </Swiper>
 
-      <svg className={css.swiperButtonPrev} aria-label="message icon">
+      <svg className={css.swiperButtonPrev} aria-label="prev button">
         <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
 
-      <svg className={css.swiperButtonNext} aria-label="message icon">
+      <svg className={css.swiperButtonNext} aria-label="next button">
         <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
+      <div className={css.customPagination}></div>
     </div>
   );
 };
