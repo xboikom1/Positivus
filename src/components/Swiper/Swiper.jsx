@@ -28,9 +28,14 @@ export default () => {
           el: `.${css.customPagination}`,
           clickable: true,
           renderBullet: (index, className) => {
-            return `<svg class="${className} ${css.customBullet}" aria-label="pagination bullet">
-                      <use href="/src/images/icons/sprite.svg#icon-star"></use>
-                    </svg>`;
+            return `<div class="${clsx(
+              className,
+              css.customBullet
+            )}" aria-label="pagination bullet">
+                <svg class="${css.customBulletIcon}">
+                  <use href="/src/images/icons/sprite.svg#icon-star"></use>
+                </svg>
+              </div>`;
           },
         }}
         className={css.swiperWrapper}
@@ -43,7 +48,7 @@ export default () => {
             "We have been working with Positivus for the past year and have seen
             a significant increase in website traffic and leads as a result of
             their efforts. The team is professional, responsive, and truly cares
-            about the success of our business.
+            about the success of our business."
           </p>
 
           <div className={css.authorInfoContainer}>
@@ -107,14 +112,13 @@ export default () => {
           </div>
         </SwiperSlide>
       </Swiper>
-
       <svg className={css.swiperButtonPrev} aria-label="prev button">
         <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
-
       <svg className={css.swiperButtonNext} aria-label="next button">
         <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
+
       <div className={css.customPagination}></div>
     </div>
   );

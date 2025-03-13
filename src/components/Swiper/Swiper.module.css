@@ -54,33 +54,43 @@
 }
 
 .swiperButtonPrev {
-    left: 35%;
+    left: 30%;
     transform: rotate(180deg);
 }
 
 .swiperButtonNext {
-    right: 35%;
+    right: 30%;
 }
 
 .customPagination {
+    width: auto !important;
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    z-index: 10;
+    left: 50% !important;
+    transform: translate(-50%);
+    bottom: 68px !important;
 }
 
 .customBullet {
-    width: 20px;
-    height: 20px;
-    fill: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1 !important;
 }
 
-.customBullet.swiper-pagination-bullet-active {
-    fill: var(--green);
+.customBulletIcon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    fill: white !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active .customBulletIcon {
+    fill: var(--green) !important;
 }
