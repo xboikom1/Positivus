@@ -2,6 +2,7 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import css from './Swiper.module.css';
+import './swiperActiveStyles.css';
 import 'swiper/css';
 import 'swiper/css/keyboard';
 import 'swiper/css/navigation';
@@ -32,7 +33,7 @@ export default () => {
               className,
               css.customBullet
             )}" aria-label="pagination bullet">
-                <svg class="${css.customBulletIcon}">
+                <svg class="customBulletIcon">
                   <use href="/src/images/icons/sprite.svg#icon-star"></use>
                 </svg>
               </div>`;
