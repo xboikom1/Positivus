@@ -58,7 +58,7 @@ const Logotypes = () => {
           target="blank"
         >
           <svg
-            className={css.logoIcon}
+            className={css.logoNetflixIcon}
             width="124px"
             height="48px"
             aria-label="Netflix logo"
@@ -70,7 +70,7 @@ const Logotypes = () => {
       <li className={css.linkListItem}>
         <a className={css.link} href="https://www.zoom.com" target="blank">
           <svg
-            className={css.logoIcon}
+            className={css.logoZoomIcon}
             width="112px"
             height="48px"
             aria-label="Zoom logo"

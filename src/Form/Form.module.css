@@ -1,0 +1,65 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.formContainer {
+    border-radius: 45px;
+    padding: 60px 00px 80px 100px;
+    background: var(--grey);
+    position: relative;
+}
+
+.radioContainer {
+    display: flex;
+    gap: 36px;
+}
+
+.inputsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.input {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    max-width: 556px;
+}
+
+.submitBtn {
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+    background: var(--dark);
+    border-radius: 14px;
+    padding: 20px 35px;
+    max-width: 556px;
+}
+
+.formImg {
+    position: absolute;
+    right: -320px;
+    top: 30px;
+}
+
+.textarea {
+    max-width: 556px !important;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    resize: none;
+    outline: none;
+}

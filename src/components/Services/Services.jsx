@@ -30,7 +30,7 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-1.png"
+            src="/src/images/services-images/card-1.png"
             alt="Engine optimization illustration"
           />
         </li>
@@ -53,8 +53,8 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-2.png"
-            alt="Engine optimization illustration"
+            src="/src/images/services-images/card-2.png"
+            alt="Pay-per-click illustration"
           />
         </li>
         <li className={css.cardListItem}>
@@ -76,7 +76,7 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-3.png"
+            src="/src/images/services-images/card-3.png"
             alt="Social Media Marketing illustration"
           />
         </li>
@@ -99,7 +99,7 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-4.png"
+            src="/src/images/services-images/card-4.png"
             alt="Email Marketing illustration"
           />
         </li>
@@ -122,7 +122,7 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-5.png"
+            src="/src/images/services-images/card-5.png"
             alt="Content creation illustration"
           />
         </li>
@@ -145,7 +145,7 @@ const Services = () => {
             </a>
           </div>
           <img
-            src="/src/images/card-images/card-6.png"
+            src="/src/images/services-images/card-6.png"
             alt="Analytics and Tracking illustration"
           />
         </li>

@@ -2,3 +2,23 @@
     display: flex;
     justify-content: space-between;
 }
+
+.logoNetflixIcon {
+    fill: rgb(50, 50, 50);
+    transition: fill 200ms linear;
+}
+
+.logoNetflixIcon:hover,
+.logoNetflixIcon:focus {
+    fill: red;
+}
+
+.logoZoomIcon {
+    fill: rgb(50, 50, 50);
+    transition: fill 200ms linear;
+}
+
+.logoZoomIcon:hover,
+.logoZoomIcon:focus {
+    fill: blue;
+}

@@ -1,4 +1,5 @@
 import Case_Studies from './components/Case Studies/Case Studies';
+import ContactUs from './components/Contact us/Contact us';
 import CTA_block from './components/CTA Block/CTA block';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
@@ -19,6 +20,7 @@ const App = () => {
         <Working_Process />
         <Team />
         <Testimonials />
+        <ContactUs />
       </main>
       <footer></footer>
     </div>

@@ -5,10 +5,10 @@ const Testimonials = () => {
   return (
     <section className="section" id="case">
       <div className="titleContainer">
-        <h2 className={css.title}>Team</h2>
+        <h2 className={css.title}>Testimonials</h2>
         <p className={css.titleText}>
-          Meet the skilled and experienced team behind our successful digital
-          marketing strategies
+          Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
+          about Our Digital Marketing Services
         </p>
       </div>
       <Swiper />
