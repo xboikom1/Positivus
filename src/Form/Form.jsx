@@ -4,7 +4,7 @@ import { Form, Formik, Field } from 'formik';
 
 const Contact_Form = () => {
   const initialValues = {
-    name: '',
+    username: '',
     email: '',
     message: '',
     intention: 'greeting',
@@ -13,7 +13,6 @@ const Contact_Form = () => {
   const id = useId();
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
     actions.resetForm();
   };
 
@@ -22,24 +21,24 @@ const Contact_Form = () => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={css.form}>
           <div className={css.radioContainer}>
-            <label htmlFor={`${id} greeting`}>
+            <label className={css.radioLabel}>
               <Field
                 type="radio"
                 name="intention"
                 value="greeting"
-                className={css.radioBtn}
-                id={`${id} greeting`}
+                className={css.realRadio}
               />
+              <span className={css.customRadio} />
               Say Hi
             </label>
-            <label htmlFor={`${id} quote`}>
+            <label className={css.radioLabel}>
               <Field
                 type="radio"
                 name="intention"
                 value="quote"
-                className={css.radioBtn}
-                id={`${id} quote`}
+                className={css.realRadio}
               />
+              <span className={css.customRadio} />
               Get a Quote
             </label>
           </div>
