@@ -21,17 +21,17 @@ const Navigation = () => {
           </a>
         </li>
         <li className={css.navListItem}>
-          <a href="" className={css.navLink}>
+          <a href="#case" className={css.navLink}>
             Use Cases
           </a>
         </li>
         <li className={css.navListItem}>
-          <a href="" className={css.navLink}>
+          <a href="#contacts" className={css.navLink}>
             Prices
           </a>
         </li>
         <li className={css.navListItem}>
-          <a href="" className={css.navLink}>
+          <a href="#testimonials" className={css.navLink}>
             Blog
           </a>
         </li>

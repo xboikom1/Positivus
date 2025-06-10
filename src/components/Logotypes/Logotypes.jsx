@@ -4,7 +4,12 @@ const Logotypes = () => {
   return (
     <ul className={css.linkList}>
       <li className={css.linkListItem}>
-        <a className={css.link} href="https://www.amazon.com" target="blank">
+        <a
+          className={css.link}
+          href="https://www.amazon.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className={css.logoIcon}
             width="124px"
@@ -16,7 +21,12 @@ const Logotypes = () => {
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="https://dribbble.com" target="blank">
+        <a
+          className={css.link}
+          href="https://dribbble.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className={css.logoIcon}
             width="128px"
@@ -28,7 +38,12 @@ const Logotypes = () => {
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="https://www.hubspot.com" target="blank">
+        <a
+          className={css.link}
+          href="https://www.hubspot.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className={css.logoIcon}
             width="124px"
@@ -40,7 +55,12 @@ const Logotypes = () => {
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="https://www.notion.com" target="blank">
+        <a
+          className={css.link}
+          href="https://www.notion.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className={css.logoIcon}
             width="148px"
@@ -55,7 +75,8 @@ const Logotypes = () => {
         <a
           className={css.link}
           href="https://www.netflix.com/browse"
-          target="blank"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             className={css.logoNetflixIcon}
@@ -68,7 +89,12 @@ const Logotypes = () => {
         </a>
       </li>
       <li className={css.linkListItem}>
-        <a className={css.link} href="https://www.zoom.com" target="blank">
+        <a
+          className={css.link}
+          href="https://www.zoom.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className={css.logoZoomIcon}
             width="112px"

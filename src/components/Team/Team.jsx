@@ -2,7 +2,7 @@ import css from './Team.module.css';
 
 const Team = () => {
   return (
-    <section className="section" id="case">
+    <section className="section" id="team">
       <div className="titleContainer">
         <h2 className={css.title}>Team</h2>
         <p className={css.titleText}>
@@ -24,7 +24,8 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className={css.linkedinIcon}
@@ -55,7 +56,8 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className={css.linkedinIcon}
@@ -85,7 +87,8 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className={css.linkedinIcon}
@@ -115,7 +118,8 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className={css.linkedinIcon}
@@ -145,7 +149,8 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className={css.linkedinIcon}
@@ -176,7 +181,7 @@ const Team = () => {
             <a
               className={css.iconLink}
               href="https://www.linkedin.com/"
-              target="blank"
+              target="_blank"
             >
               <svg
                 className={css.linkedinIcon}

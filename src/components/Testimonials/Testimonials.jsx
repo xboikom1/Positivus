@@ -3,7 +3,7 @@ import css from './Testimonials.module.css';
 
 const Testimonials = () => {
   return (
-    <section className="section" id="case">
+    <section className="section" id="testimonials">
       <div className="titleContainer">
         <h2 className={css.title}>Testimonials</h2>
         <p className={css.titleText}>

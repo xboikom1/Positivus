@@ -1,6 +1,7 @@
 import Case_Studies from './components/Case Studies/Case Studies';
 import ContactUs from './components/Contact us/Contact us';
 import CTA_block from './components/CTA Block/CTA block';
+import Footer from './components/Footer/Footer';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import Team from './components/Team/Team';
@@ -22,7 +23,9 @@ const App = () => {
         <Testimonials />
         <ContactUs />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

@@ -1,0 +1,157 @@
+.footer {
+    border-radius: 45px 45px 0 0;
+    padding: 55px 60px 50px 60px;
+    background: var(--dark);
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 66px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 220px;
+    padding: 10px 0;
+    fill: #fff;
+    color: #fff;
+}
+
+.navLink {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    color: #fff;
+    padding: 20px 0;
+    transition: color 250ms linear;
+}
+
+.navLink:focus,
+.navLink:hover {
+    color: var(--green);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.iconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    fill: white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.contactsContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.contactsContainer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    height: 1px;
+    background: #fff;
+    width: 100%;
+    border: none;
+}
+
+.contactsHeader {
+    background-color: var(--green);
+    display: flex;
+    border-radius: 7px;
+    padding: 0px 7px;
+    width: fit-content;
+    margin-bottom: 27px;
+}
+
+.addressContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.adressInfo,
+.adressLinks {
+    color: #fff;
+    font-style: normal;
+}
+
+.form {
+    display: flex;
+    gap: 20px;
+    padding: 58px 40px;
+    border-radius: 14px;
+    background-color: #292a32;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #292a32;
+    border-radius: 14px;
+    padding: 22px 35px;
+}
+
+.input::placeholder {
+    color: #fff;
+}
+
+.submitBtn {
+    display: flex;
+    border-radius: 14px;
+    padding: 20px 35px;
+    background-color: var(--green);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrightBlock {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.copyrightInfo {
+    line-height: 156%;
+    color: #fff;
+}
+
+.privacyLink {
+    line-height: 156%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+}

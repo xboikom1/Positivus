@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import css from './Form.module.css';
+import css from './Contact form.module.css';
 import { Form, Formik, Field } from 'formik';
 
 const Contact_Form = () => {
@@ -49,6 +49,7 @@ const Contact_Form = () => {
               <Field
                 type="text"
                 name="username"
+                placeholder="Name"
                 className={css.input}
                 id={`${id} username`}
               />
@@ -58,6 +59,7 @@ const Contact_Form = () => {
               <Field
                 type="email"
                 name="email"
+                placeholder="Email"
                 className={css.input}
                 id={`${id} email`}
                 required
