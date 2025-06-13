@@ -1,6 +1,17 @@
 import css from './Header.module.css';
 
 const Header = () => {
+  const handleClick = e => {
+    e.preventDefault();
+    const elementID = 'contacts';
+    if (elementID) {
+      document.getElementById(elementID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div className={css.headerContainer}>
       <div className={css.textContainer}>
@@ -12,7 +23,7 @@ const Header = () => {
           through a range of services including SEO, PPC, social media
           marketing, and content creation.
         </p>
-        <button type="button" className={css.bookBtn}>
+        <button type="button" className={css.bookBtn} onClick={handleClick}>
           Book a consultation
         </button>
       </div>

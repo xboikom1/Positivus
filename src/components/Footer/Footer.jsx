@@ -11,6 +11,18 @@ const Footer = () => {
     actions.resetForm();
   };
 
+  const handleNavLinkClick = e => {
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const elementID = href.slice(1);
+      const target = document.getElementById(elementID);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <section className={clsx('section', css.footer)} id="footer">
       <nav className={css.navContainer}>
@@ -22,27 +34,47 @@ const Footer = () => {
         </a>
         <ul className={css.navList}>
           <li className={css.navListItem}>
-            <a href="#about-us" className={css.navLink}>
+            <a
+              href="#working-process"
+              className={css.navLink}
+              onClick={handleNavLinkClick}
+            >
               About us
             </a>
           </li>
           <li className={css.navListItem}>
-            <a href="#services" className={css.navLink}>
+            <a
+              href="#services"
+              className={css.navLink}
+              onClick={handleNavLinkClick}
+            >
               Services
             </a>
           </li>
           <li className={css.navListItem}>
-            <a href="#case" className={css.navLink}>
+            <a
+              href="#case"
+              className={css.navLink}
+              onClick={handleNavLinkClick}
+            >
               Use Cases
             </a>
           </li>
           <li className={css.navListItem}>
-            <a href="#contacts" className={css.navLink}>
+            <a
+              href="#contacts"
+              className={css.navLink}
+              onClick={handleNavLinkClick}
+            >
               Prices
             </a>
           </li>
           <li className={css.navListItem}>
-            <a href="#testimonials" className={css.navLink}>
+            <a
+              href="#testimonials"
+              className={css.navLink}
+              onClick={handleNavLinkClick}
+            >
               Blog
             </a>
           </li>
