@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import css from './Navigation.module.css';
 
 const Navigation = () => {
@@ -12,7 +13,6 @@ const Navigation = () => {
       }
     }
   };
-
   const handleRequestClick = e => {
     e.preventDefault();
     const elementID = 'contacts';
@@ -20,6 +20,21 @@ const Navigation = () => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleBurgerClick = () => {
+    setIsMenuOpen(prev => !prev);
+  };
+
+  const handleNavLinkMobileClick = e => {
+    handleNavLinkClick(e);
+    setIsMenuOpen(false);
+  };
+
+  const handleRequestMobileClick = e => {
+    handleRequestClick(e);
+    setIsMenuOpen(false);
   };
 
   return (

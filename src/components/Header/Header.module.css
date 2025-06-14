@@ -2,11 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.title {
-    font-weight: 500;
-    font-size: 60px;
+    gap: 60px;
 }
 
 .textContainer {
@@ -39,4 +35,58 @@
 .bookBtn:hover,
 .bookBtn:focus {
     color: var(--green);
+}
+
+.image {
+    width: 520px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .textContainer {
+        max-width: 100%;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .bookBtn {
+        width: 100%;
+    }
+
+    .image {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .textContainer {
+        max-width: 100%;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .image {
+        width: 100%;
+    }
 }

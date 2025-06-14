@@ -10,14 +10,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 60px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 220px;
     padding: 10px 0;
+}
+
+.logoText {
+    margin-left: 12px;
 }
 
 .navLink {
@@ -38,7 +42,7 @@
     border-radius: 14px;
     padding: 20px 35px;
     min-width: 231px;
-    height: 68px;
+    max-height: 68px;
     background-color: white;
     transition: color 250ms linear, background-color 250ms linear;
 }
@@ -47,4 +51,48 @@
 .requestBtn:focus {
     color: var(--green);
     background-color: var(--dark);
+}
+
+@media only screen and (max-width:1024px) {
+    .navList {
+        gap: 24px;
+    }
+
+    .requestBtn {
+        font-size: 16px;
+        padding: 16px 24px;
+        min-width: 180px;
+    }
+
+    .logoText {
+        margin-left: 8px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .navContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 0 8px;
+    }
+
+    .navList {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .logo {
+        min-width: 80px;
+        padding: 4px 0;
+    }
+
+    .requestBtn {
+        font-size: 14px;
+        padding: 8px 10px;
+        min-width: 90px;
+        height: 36px;
+    }
 }

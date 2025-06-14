@@ -27,7 +27,11 @@ const Header = () => {
           Book a consultation
         </button>
       </div>
-      <img src="/src/images/header-image.png" alt="Decoration image" />
+      <img
+        src="/src/images/header-image.png"
+        alt="Decoration image"
+        className={css.image}
+      />
     </div>
   );
 };
