@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import css from './Header.module.css';
 
 const Header = () => {
@@ -23,7 +24,11 @@ const Header = () => {
           through a range of services including SEO, PPC, social media
           marketing, and content creation.
         </p>
-        <button type="button" className={css.bookBtn} onClick={handleClick}>
+        <button
+          type="button"
+          className={clsx(css.bookBtn, css.bookBtnDesktop)}
+          onClick={handleClick}
+        >
           Book a consultation
         </button>
       </div>
@@ -32,6 +37,13 @@ const Header = () => {
         alt="Decoration image"
         className={css.image}
       />
+      <button
+        type="button"
+        className={clsx(css.bookBtn, css.bookBtnMobile)}
+        onClick={handleClick}
+      >
+        Book a consultation
+      </button>
     </div>
   );
 };
