@@ -36,6 +36,9 @@
 
 .requestBtn {
     border: 1px solid var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     line-height: 140%;
     text-align: center;
@@ -51,6 +54,61 @@
 .requestBtn:focus {
     color: var(--green);
     background-color: var(--dark);
+}
+
+.mobileNavList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileMenuOpenBtn {
+    display: none;
+    justify-content: space-between;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.mobileMenuCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    justify-content: space-between;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInMenu 0.2s;
+    overflow: hidden;
+}
+
+@keyframes fadeInMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width:1024px) {
@@ -71,17 +129,13 @@
 
 @media only screen and (max-width:768px) {
     .navContainer {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 12px;
-        padding: 0 8px;
+        justify-content: space-between;
     }
 
     .navList {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        align-items: flex-start;
+        display: none;
     }
 
     .logo {
@@ -90,9 +144,18 @@
     }
 
     .requestBtn {
-        font-size: 14px;
-        padding: 8px 10px;
-        min-width: 90px;
+        border-radius: 14px;
+        padding: 8px 12px;
+        min-width: 150px;
+        height: 40px;
+    }
+
+    .mobileMenuOpenBtn {
+        display: flex;
+    }
+
+    .mobileMenuIcon {
+        width: 36px;
         height: 36px;
     }
 }

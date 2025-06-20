@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import css from './Navigation.module.css';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { IoClose } from 'react-icons/io5';
 
 const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleNavLinkClick = e => {
     const href = e.currentTarget.getAttribute('href');
     if (href && href.startsWith('#')) {
@@ -13,6 +17,7 @@ const Navigation = () => {
       }
     }
   };
+
   const handleRequestClick = e => {
     e.preventDefault();
     const elementID = 'contacts';
@@ -21,7 +26,6 @@ const Navigation = () => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleBurgerClick = () => {
     setIsMenuOpen(prev => !prev);
@@ -36,6 +40,16 @@ const Navigation = () => {
     handleRequestClick(e);
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]);
 
   return (
     <nav className={css.navContainer}>
@@ -95,6 +109,84 @@ const Navigation = () => {
           Request a quote
         </button>
       </ul>
+      <button
+        className={css.mobileMenuOpenBtn}
+        type="button"
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isMenuOpen}
+        onClick={handleBurgerClick}
+      >
+        <RxHamburgerMenu className={css.mobileMenuIcon} />
+      </button>
+
+      {isMenuOpen && (
+        <div className={css.mobileMenu}>
+          <button
+            className={css.mobileMenuCloseBtn}
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <IoClose className={css.mobileMenuIcon} />
+          </button>
+          <ul className={css.mobileNavList}>
+            <li>
+              <a
+                href="#working-process"
+                className={css.navLink}
+                onClick={handleNavLinkMobileClick}
+              >
+                About us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                className={css.navLink}
+                onClick={handleNavLinkMobileClick}
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#case"
+                className={css.navLink}
+                onClick={handleNavLinkMobileClick}
+              >
+                Use Cases
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacts"
+                className={css.navLink}
+                onClick={handleNavLinkMobileClick}
+              >
+                Prices
+              </a>
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                className={css.navLink}
+                onClick={handleNavLinkMobileClick}
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <button
+                type="button"
+                className={css.requestBtn}
+                onClick={handleRequestMobileClick}
+              >
+                Request a quote
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
