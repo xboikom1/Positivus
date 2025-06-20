@@ -1,6 +1,8 @@
 .linkList {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px 0;
+    justify-items: center;
 }
 
 .logoNetflixIcon {
@@ -21,4 +23,16 @@
 .logoZoomIcon:hover,
 .logoZoomIcon:focus {
     fill: blue;
+}
+
+@media only screen and (max-width: 1024px) {
+    .linkList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .linkList {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
