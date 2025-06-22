@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 h4 {
@@ -50,10 +50,9 @@ li {
 }
 
 ul {
-  margin: 0;
   display: flex;
+  margin: 0;
   padding: 0;
-  gap: 4px;
 }
 
 button {
@@ -113,7 +112,7 @@ body {
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
@@ -123,7 +122,8 @@ body {
   }
 
   .titleContainer {
-    gap: 16px;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 32px;
   }
 
@@ -132,18 +132,10 @@ body {
   }
 
   h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px;
+    font-size: 36px;
   }
 
   h3 {
-    font-size: 18px;
-  }
-
-  ul {
-    gap: 2px;
+    font-size: 24px;
   }
 }

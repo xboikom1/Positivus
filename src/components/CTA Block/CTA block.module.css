@@ -3,19 +3,21 @@
     padding: 60px;
     background-color: var(--grey);
     position: relative;
+    margin: 30px 0;
+    align-items: center;
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
     gap: 26px;
-    max-width: 500px;
+    max-width: 50%;
 }
 
 .btn {
     border-radius: 14px;
     padding: 20px 35px;
-    width: 288px;
+    max-width: 288px;
     height: 68px;
     background-color: var(--dark);
     color: white;
@@ -29,6 +31,34 @@
 
 .image {
     position: absolute;
-    right: 0;
+    right: -80px;
     top: -24px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sectionContainer {
+        display: flex;
+        justify-content: center;
+        padding: 60px 30px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .textContainer {
+        max-width: 60%;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .textContainer {
+        align-items: start;
+    }
+
+    .btn {
+        height: auto;
+        padding: 20px;
+    }
 }
