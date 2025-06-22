@@ -1,4 +1,5 @@
 .title {
+    height: fit-content;
     font-weight: 500;
     background-color: var(--green);
     border-radius: 7px;
@@ -8,10 +9,10 @@
 .titleText {
     display: block;
     max-width: 580px;
+    text-align: center;
 }
 
 .cardList {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 40px;
@@ -20,8 +21,8 @@
 .cardListItem {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 50px;
+    align-items: end;
+    padding: 50px 30px;
     width: calc((100% - 40px) / 2);
     box-shadow: 0 5px 0 0 var(--dark);
     border: 1px solid var(--dark);
@@ -31,15 +32,19 @@
 .cardInfo {
     display: flex;
     flex-direction: column;
-    height: 210px;
+    gap: 90px;
+    align-items: start;
     justify-content: space-between;
 }
 
 .cardTitle {
     display: block;
-    width: fit-content;
+    max-width: fit-content;
+    white-space: nowrap;
+    max-width: fit-content;
     border-radius: 7px;
     padding: 0px 7px;
+    font-size: 26px;
 }
 
 .cardLink {
@@ -55,6 +60,11 @@
     justify-content: center;
     border-radius: 100%;
     padding: 12px;
+}
+
+.cardImg {
+    display: block;
+    max-width: 50%;
 }
 
 .cardListItem:nth-child(3n+1) {
@@ -98,4 +108,28 @@
 
 .cardListItem:nth-child(3n) .linkText {
     color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    .cardListItem {
+        width: 100%;
+        border-radius: 32px;
+        padding: 50px;
+        align-items: center;
+    }
+
+    .cardImg {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardListItem {
+        padding: 30px;
+        align-items: end;
+    }
+
+    .cardImg {
+        width: 40%;
+    }
 }

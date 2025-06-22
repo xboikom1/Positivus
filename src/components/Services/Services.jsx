@@ -13,10 +13,10 @@ const Services = () => {
       <ul className={css.cardList}>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Search engine</h3>
-              <h3 className={css.cardTitle}>optimization</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Search engine</span>
+              <span className={css.cardTitle}>optimization</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -30,16 +30,17 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-1.png"
             alt="Engine optimization illustration"
           />
         </li>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Pay-per-click</h3>
-              <h3 className={css.cardTitle}>advertising</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Pay-per-click</span>
+              <span className={css.cardTitle}>advertising</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -53,16 +54,17 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-2.png"
             alt="Pay-per-click illustration"
           />
         </li>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Social Media</h3>
-              <h3 className={css.cardTitle}>Marketing</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Social Media</span>
+              <span className={css.cardTitle}>Marketing</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -76,16 +78,17 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-3.png"
             alt="Social Media Marketing illustration"
           />
         </li>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Email</h3>
-              <h3 className={css.cardTitle}>Marketing</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Email</span>
+              <span className={css.cardTitle}>Marketing</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -99,16 +102,17 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-4.png"
             alt="Email Marketing illustration"
           />
         </li>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Content</h3>
-              <h3 className={css.cardTitle}>Creation</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Content</span>
+              <span className={css.cardTitle}>Creation</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -122,16 +126,17 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-5.png"
             alt="Content creation illustration"
           />
         </li>
         <li className={css.cardListItem}>
           <div className={css.cardInfo}>
-            <div>
-              <h3 className={css.cardTitle}>Analytics and</h3>
-              <h3 className={css.cardTitle}>Tracking</h3>
-            </div>
+            <h3>
+              <span className={css.cardTitle}>Analytics and</span>
+              <span className={css.cardTitle}>Tracking</span>
+            </h3>
             <a className={css.cardLink} href="#services">
               <svg
                 className={css.arrowIcon}
@@ -145,6 +150,7 @@ const Services = () => {
             </a>
           </div>
           <img
+            className={css.cardImg}
             src="/src/images/services-images/card-6.png"
             alt="Analytics and Tracking illustration"
           />
