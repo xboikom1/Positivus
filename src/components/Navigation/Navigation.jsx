@@ -2,9 +2,17 @@ import { useState, useEffect } from 'react';
 import css from './Navigation.module.css';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
+  useEffect(() => {
+    if (!isMobile && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [isMobile, isMenuOpen]);
 
   const handleNavLinkClick = e => {
     const href = e.currentTarget.getAttribute('href');
@@ -35,21 +43,10 @@ const Navigation = () => {
     handleNavLinkClick(e);
     setIsMenuOpen(false);
   };
-
   const handleRequestMobileClick = e => {
     handleRequestClick(e);
     setIsMenuOpen(false);
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768 && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [isMenuOpen]);
 
   return (
     <nav className={css.navContainer}>
