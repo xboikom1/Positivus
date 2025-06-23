@@ -5,12 +5,15 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
-  {
+  { ignores: ['dist'] },  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...Object.fromEntries(
+          Object.entries(globals.browser).filter(([key]) => !key.includes('AudioWorkletGlobalScope'))
+        ),
+      },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
