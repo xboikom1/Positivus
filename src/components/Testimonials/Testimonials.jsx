@@ -1,4 +1,4 @@
-import Swiper from '../Swiper/Swiper';
+import TestimonialsSwiper from '../TestimonialsSwiper/TestimonialsSwiper';
 import css from './Testimonials.module.css';
 
 const Testimonials = () => {
@@ -11,7 +11,7 @@ const Testimonials = () => {
           about Our Digital Marketing Services
         </p>
       </div>
-      <Swiper />
+      <TestimonialsSwiper />
     </section>
   );
 };

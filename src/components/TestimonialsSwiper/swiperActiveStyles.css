@@ -1,0 +1,21 @@
+.customBulletIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  color: white;
+  fill: white;
+  transition: fill 0.3s ease, transform 0.2s ease;
+}
+
+.customBulletIcon:hover {
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active .customBulletIcon {
+  fill: var(--green);
+  transform: scale(1.2);
+}
