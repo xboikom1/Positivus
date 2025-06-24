@@ -3,6 +3,7 @@
     background-color: var(--green);
     border-radius: 7px;
     padding: 0px 7px;
+    white-space: nowrap;
 }
 
 .titleText {
@@ -58,4 +59,57 @@
 
 .arrowIcon {
     fill: var(--green);
+}
+
+
+.mobileContainer {
+    width: 100%;
+}
+
+.mobileSwiper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.mobileSwiper .listItem::after {
+    display: none;
+}
+
+.swiperBullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiperBulletActive {
+    background-color: var(--green);
+}
+
+@media only screen and (max-width: 1024px) {
+    .list {
+        gap: 108px;
+    }
+
+    .listItem::after {
+        margin-left: 54px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .listItem {
+        background-color: var(--dark);
+        border-radius: 40px;
+        padding: 40px;
+    }
+
+    .link {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
 }
