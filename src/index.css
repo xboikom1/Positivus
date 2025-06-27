@@ -19,7 +19,7 @@ h5,
 h6 {
   font-weight: 500;
   margin: 0;
-  font-family: "Space Grotesk", serif;
+  font-family: 'Space Grotesk', serif;
 }
 
 h1 {
@@ -42,7 +42,7 @@ p,
 input {
   font-size: 18px;
   margin: 0;
-  font-family: "Space Grotesk", serif;
+  font-family: 'Space Grotesk', serif;
 }
 
 li {
@@ -89,6 +89,7 @@ body {
 
 .titleContainer {
   display: flex;
+  align-items: center;
   gap: 40px;
   margin-bottom: 80px;
 }

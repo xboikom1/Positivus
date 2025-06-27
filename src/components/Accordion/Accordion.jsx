@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -6,8 +5,10 @@ import Typography from '@mui/material/Typography';
 import SvgIcon from '@mui/material/SvgIcon';
 import clsx from 'clsx';
 import css from './Accordion.module.css';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-function ExpandIcon({ expanded }) {
+const ExpandIcon = ({ expanded }) => {
   return (
     <SvgIcon>
       {expanded ? (
@@ -21,10 +22,14 @@ function ExpandIcon({ expanded }) {
       )}
     </SvgIcon>
   );
-}
+};
+
+ExpandIcon.propTypes = {
+  expanded: PropTypes.bool.isRequired,
+};
 
 export default function ControlledAccordions() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -42,9 +47,9 @@ export default function ControlledAccordions() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             01 <span className={css.titleText}>Consultation</span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>
@@ -65,12 +70,12 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             02
             <span className={css.titleText}>
               Research and Strategy Development
             </span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>
@@ -91,9 +96,9 @@ export default function ControlledAccordions() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             03 <span className={css.titleText}>Implementation</span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>
@@ -114,10 +119,10 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             04
             <span className={css.titleText}>Monitoring and Optimization</span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>
@@ -138,10 +143,10 @@ export default function ControlledAccordions() {
           aria-controls="panel5bh-content"
           id="panel5bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             05
             <span className={css.titleText}>Reporting and Communication</span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>
@@ -162,9 +167,9 @@ export default function ControlledAccordions() {
           aria-controls="panel6bh-content"
           id="panel6bh-header"
         >
-          <h1 className={css.listItemTitle}>
+          <h3 className={css.listItemTitle}>
             06 <span className={css.titleText}>Continual Improvement</span>
-          </h1>
+          </h3>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={css.accordionInfo}>

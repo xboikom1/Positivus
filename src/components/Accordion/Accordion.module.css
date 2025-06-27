@@ -1,53 +1,104 @@
 .accordionList {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .listItem {
-    border: 1px solid var(--dark);
-    border-radius: 45px !important;
-    padding: 41px 60px;
-    box-shadow: 0 5px 0 0 var(--dark) !important;
-    background-color: var(--grey) !important;
-    margin: 0 !important;
-    transition: background-color 250ms linear !important;
+  border: 1px solid var(--dark);
+  border-radius: 45px !important;
+  padding: 41px 60px;
+  box-shadow: 0 5px 0 0 var(--dark) !important;
+  background-color: var(--grey) !important;
+  margin: 0 !important;
+  transition: background-color 250ms linear !important;
 }
 
 .expanded {
-    background-color: var(--green) !important;
+  background-color: var(--green) !important;
 }
 
 .accordionInfo::before {
-    content: '';
-    display: flex;
-    border: 1px solid var(--dark);
-    width: 100%;
-    height: 0;
-    margin-bottom: 30px;
+  content: '';
+  display: flex;
+  border: 1px solid var(--dark);
+  width: 100%;
+  height: 0;
+  margin-bottom: 30px;
 }
 
 .listItem::before {
-    display: none;
+  display: none;
 }
 
 .listItemTitle {
-    display: flex;
-    align-items: center;
-    margin: -12px 0;
+  display: flex;
+  align-items: center;
+  font-size: 52px;
+  margin: -12px 0;
 }
 
 .titleText {
-    font-size: 30px;
-    margin-left: 25px;
-    font-weight: 500;
+  font-size: 30px;
+  margin-left: 25px;
+  font-weight: 500;
 }
 
 .svgIcon {
-    width: 58px !important;
-    height: 59px !important;
-    border: 1px solid black;
-    border-radius: 100%;
-    padding: 16px;
-    fill: var(--dark);
+  width: 58px !important;
+  height: 59px !important;
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 16px;
+  fill: var(--dark);
+}
+
+@media only screen and (max-width: 1024px) {
+  .listItem {
+    padding: 32px 40px;
+  }
+  .listItemTitle {
+    font-size: 44px;
+  }
+  .titleText {
+    font-size: 26px;
+    margin-left: 20px;
+  }
+
+  .svgIcon {
+    width: 48px !important;
+    height: 48px !important;
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .accordionList {
+    gap: 16px;
+  }
+
+  .listItem {
+    border-radius: 30px;
+    padding: 24px 20px;
+  }
+
+  .listItemTitle {
+    margin: -8px 0;
+    font-size: 36px;
+  }
+
+  .titleText {
+    font-size: 20px;
+    margin-left: 16px;
+  }
+
+  .svgIcon {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px;
+  }
+
+  .accordionInfo::before {
+    margin-bottom: 20px;
+  }
 }
