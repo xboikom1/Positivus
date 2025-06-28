@@ -63,28 +63,49 @@
 
 @media only screen and (max-width: 1024px) {
   .list {
-    gap: 108px;
+    gap: 100px;
   }
 
   .listItem::after {
-    margin-left: 54px;
+    margin-left: 50px;
   }
 }
 
+.mobileSwiper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.mobileSwiper .listItem::after {
+  display: none;
+}
+
+.swiperBullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiperBulletActive {
+  background-color: var(--green);
+}
+
 @media only screen and (max-width: 767px) {
-  .list {
-    padding: 24px 8px;
-    gap: 24px;
-    border-radius: 18px;
-  }
-
-  .titleText {
-    max-width: 100%;
-    font-size: 16px;
-  }
-
   .listItem {
-    gap: 12px;
+    background-color: var(--dark);
+    border-radius: 40px;
+    padding: 40px;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .swiperSlide {
+    height: auto !important;
   }
 
   .link {

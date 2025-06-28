@@ -58,7 +58,7 @@ const Case_Studies = () => {
             className={css.mobileSwiper}
           >
             {caseStudiesData.map(item => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} className={css.swiperSlide}>
                 {renderCaseStudyItem(item)}
               </SwiperSlide>
             ))}

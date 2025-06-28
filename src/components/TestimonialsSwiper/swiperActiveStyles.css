@@ -19,3 +19,14 @@
   fill: var(--green);
   transform: scale(1.2);
 }
+
+@media only screen and (max-width: 767px) {
+  .customBulletIcon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .customBulletIcon:hover {
+    transform: scale(1.2);
+  }
+}
