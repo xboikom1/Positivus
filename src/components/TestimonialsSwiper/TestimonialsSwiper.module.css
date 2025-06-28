@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   z-index: 0;
-  width: clamp(400px, 40vw, 606px);
+  width: clamp(400px, 40vw, 600px);
   height: 238px;
 }
 
@@ -28,16 +28,18 @@
   position: absolute;
   color: white;
   top: 18%;
-  left: 52%;
-  transform: translate(-50%);
+  left: 12%;
   z-index: 1;
   font-size: 16px;
   line-height: 1.4;
-  width: calc(40vw - 25%);
+  width: clamp(330px, 32vw, 440px);
 }
 
 .authorInfoContainer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   left: 12%;
   z-index: 2;
   transform: translateY(50%);
@@ -49,6 +51,8 @@
 
 .authorText {
   color: white;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .swiperButtonPrev,
@@ -85,36 +89,82 @@
   user-select: none;
 }
 
-@media (max-width: 1024px) {
-  .bubbleText {
-    width: clamp(176px, calc(35vw - 104px), 396px);
-    padding: 0 52px;
-    font-size: 15px;
+@media only screen and (max-width: 1024px) {
+  .swiperContainer {
+    padding: 40px 0 60px;
   }
 
   .bubbleIcon {
-    width: clamp(280px, 35vw, 500px);
-    height: 240px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .bubbleText {
+    width: clamp(300px, 40vw, 440px);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8%;
+  }
+
+  .authorInfoContainer {
+    left: 28%;
+  }
+
+  .swiperButtonPrev {
+    left: 20%;
+  }
+
+  .swiperButtonNext {
+    right: 20%;
   }
 }
 
-@media (max-width: 768px) {
-  .bubbleText {
-    width: clamp(146px, calc(80vw - 104px), 296px);
-    padding: 0 52px;
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
-  .bubbleIcon {
-    width: clamp(250px, 80vw, 400px);
-    height: 200px;
-  }
-  .authorInfoContainer {
-    margin-top: 15px;
+@media only screen and (max-width: 767px) {
+  .swiperContainer {
+    padding: 30px 0 60px;
   }
 
   .swiperSlide {
-    min-height: 350px;
+    min-height: 180px;
+  }
+
+  .bubbleText {
+    width: clamp(200px, 70vw, 372px);
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0 auto;
+  }
+
+  .authorInfoContainer {
+    position: absolute;
+    align-items: center;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%);
+  }
+
+  .swiperSlide {
+    margin-bottom: 60px;
+  }
+
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    bottom: 35px;
+  }
+
+  .swiperButtonPrev {
+    left: 15%;
+  }
+
+  .swiperButtonNext {
+    right: 15%;
+  }
+
+  .customPagination {
+    bottom: 58px !important;
+    gap: 20px;
   }
 }

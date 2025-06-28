@@ -9,15 +9,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const TestimonialsSwiper = () => {
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isDesktop = useMediaQuery('(min-width: 1025px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   return (
     <div className={css.swiperContainer}>
       <Swiper
         loop={true}
         modules={[Navigation, Pagination, A11y]}
-        slidesPerView={isMobile ? 1 : 2}
-        spaceBetween={isMobile ? 20 : 50}
+        slidesPerView={isDesktop ? 2 : 1}
+        spaceBetween={50}
         centeredSlides={true}
         navigation={{
           nextEl: `.${css.swiperButtonNext}`,
@@ -37,9 +38,11 @@ const TestimonialsSwiper = () => {
         className={css.swiperWrapper}
       >
         <SwiperSlide className={css.swiperSlide}>
-          <svg className={css.bubbleIcon} aria-label="message icon">
-            <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
-          </svg>
+          {!isMobile && (
+            <svg className={css.bubbleIcon} aria-label="message icon">
+              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+            </svg>
+          )}
           <p className={css.bubbleText}>
             &ldquo;We have been working with Positivus for the past year and
             have seen a significant increase in website traffic and leads. The
@@ -52,9 +55,11 @@ const TestimonialsSwiper = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className={css.swiperSlide}>
-          <svg className={css.bubbleIcon} aria-label="message icon">
-            <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
-          </svg>
+          {!isMobile && (
+            <svg className={css.bubbleIcon} aria-label="message icon">
+              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+            </svg>
+          )}
           <p className={css.bubbleText}>
             &ldquo;Positivus helped us transform our online presence. Their
             expertise in SEO and digital marketing significantly increased our
@@ -66,9 +71,11 @@ const TestimonialsSwiper = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className={css.swiperSlide}>
-          <svg className={css.bubbleIcon} aria-label="message icon">
-            <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
-          </svg>
+          {!isMobile && (
+            <svg className={css.bubbleIcon} aria-label="message icon">
+              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+            </svg>
+          )}
           <p className={css.bubbleText}>
             &ldquo;Thanks to Positivus, we have seen a drastic improvement in
             our website traffic. Their strategic approach is simply
@@ -80,9 +87,11 @@ const TestimonialsSwiper = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className={css.swiperSlide}>
-          <svg className={css.bubbleIcon} aria-label="message icon">
-            <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
-          </svg>
+          {!isMobile && (
+            <svg className={css.bubbleIcon} aria-label="message icon">
+              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+            </svg>
+          )}
           <p className={css.bubbleText}>
             &ldquo;Working with Positivus has been a game-changer for us. Their
             team is responsive, innovative, and truly understands our brand
@@ -96,9 +105,11 @@ const TestimonialsSwiper = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className={css.swiperSlide}>
-          <svg className={css.bubbleIcon} aria-label="message icon">
-            <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
-          </svg>
+          {!isMobile && (
+            <svg className={css.bubbleIcon} aria-label="message icon">
+              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+            </svg>
+          )}
           <p className={css.bubbleText}>
             &ldquo;Positivus provided excellent insights that helped us redefine
             our social media strategy. We highly recommend their
