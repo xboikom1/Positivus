@@ -1,157 +1,210 @@
 .footer {
-    border-radius: 45px 45px 0 0;
-    padding: 55px 60px 50px 60px;
-    background: var(--dark);
+  border-radius: 45px 45px 0 0;
+  padding: 55px 60px 50px 60px;
+  background: var(--dark);
 }
 
 .navList {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 66px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 220px;
-    padding: 10px 0;
-    fill: #fff;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 220px;
+  padding: 10px 0;
+  fill: #fff;
+  color: #fff;
 }
 
 .navLink {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fff;
-    color: #fff;
-    padding: 20px 0;
-    transition: color 250ms linear;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fff;
+  color: #fff;
+  padding: 20px 0;
+  transition: color 250ms linear;
 }
 
 .navLink:focus,
 .navLink:hover {
-    color: var(--green);
+  color: var(--green);
 }
 
 .socialLinks {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .iconLink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
 }
 
 .icon {
-    fill: white;
-    background-color: black;
-    border-radius: 50%;
+  fill: white;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .contactsContainer {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 100px;
 }
 
 .contactsContainer::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -50px;
-    height: 1px;
-    background: #fff;
-    width: 100%;
-    border: none;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  height: 1px;
+  background: #fff;
+  width: 100%;
+  border: none;
 }
 
 .contactsHeader {
-    background-color: var(--green);
-    display: flex;
-    border-radius: 7px;
-    padding: 0px 7px;
-    width: fit-content;
-    margin-bottom: 27px;
+  background-color: var(--green);
+  display: flex;
+  border-radius: 7px;
+  padding: 0px 7px;
+  width: fit-content;
+  margin-bottom: 27px;
 }
 
 .addressContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .adressInfo,
 .adressLinks {
-    color: #fff;
-    font-style: normal;
+  color: #fff;
+  font-style: normal;
 }
 
 .form {
-    display: flex;
-    gap: 20px;
-    padding: 58px 40px;
-    border-radius: 14px;
-    background-color: #292a32;
+  display: flex;
+  gap: 20px;
+  padding: 58px 40px;
+  border-radius: 14px;
+  background-color: #292a32;
 }
 
 .input {
-    display: flex;
-    align-items: center;
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: #292a32;
-    border-radius: 14px;
-    padding: 22px 35px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #292a32;
+  border-radius: 14px;
+  padding: 22px 35px;
 }
 
 .input::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .submitBtn {
-    display: flex;
-    border-radius: 14px;
-    padding: 20px 35px;
-    background-color: var(--green);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  border-radius: 14px;
+  padding: 20px 35px;
+  background-color: var(--green);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyrightBlock {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .copyrightInfo {
-    line-height: 156%;
-    color: #fff;
+  line-height: 156%;
+  color: #fff;
 }
 
 .privacyLink {
-    line-height: 156%;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fff;
+  line-height: 156%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 40px 30px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .navContainer {
+    margin-bottom: 50px;
+  }
+
+  .contactsContainer {
+    margin-bottom: 60px;
+  }
+
+  .form {
+    padding: 40px 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contactsContainer {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .form {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .copyrightBlock {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
 }

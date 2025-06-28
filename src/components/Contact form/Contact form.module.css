@@ -1,110 +1,153 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .formContainer {
-    border-radius: 45px;
-    padding: 60px 00px 80px 100px;
-    background: var(--grey);
-    position: relative;
+  border-radius: 45px;
+  padding: 60px 00px 80px 100px;
+  background: var(--grey);
+  position: relative;
 }
 
 .inputsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .labelContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .input {
-    border: 1px solid var(--black);
-    border-radius: 14px;
-    padding: 18px 30px;
-    max-width: 556px;
+  border: 1px solid var(--black);
+  border-radius: 14px;
+  padding: 18px 30px;
+  max-width: 556px;
 }
 
 .submitBtn {
-    font-size: 20px;
-    line-height: 140%;
-    color: #fff;
-    background: var(--dark);
-    border-radius: 14px;
-    padding: 20px 35px;
-    max-width: 556px;
-    transition: color 250ms linear;
+  font-size: 20px;
+  line-height: 140%;
+  color: #fff;
+  background: var(--dark);
+  border-radius: 14px;
+  padding: 20px 35px;
+  max-width: 556px;
+  transition: color 250ms linear;
 }
 
 .submitBtn:hover,
 .submitBtn:focus {
-    color: var(--green);
+  color: var(--green);
 }
 
 .formImg {
-    position: absolute;
-    right: -324px;
-    top: 35px;
+  position: absolute;
+  right: -324px;
+  top: 35px;
 }
 
 .textarea {
-    max-width: 556px !important;
-    font-size: 18px;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid var(--black);
-    border-radius: 14px;
-    padding: 18px 30px;
-    resize: none;
-    outline: none;
-    height: 190px;
+  max-width: 556px !important;
+  font-size: 18px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid var(--black);
+  border-radius: 14px;
+  padding: 18px 30px;
+  resize: none;
+  outline: none;
+  height: 190px;
 }
 
 .radioContainer {
-    display: flex;
-    gap: 36px;
+  display: flex;
+  gap: 36px;
 }
 
 .radioLabel {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
 }
 
 .realRadio {
-    display: none;
+  display: none;
 }
 
 .customRadio {
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--black);
-    border-radius: 50%;
-    margin-right: 8px;
-    position: relative;
-    background: #fff;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  background: #fff;
 }
 
 .customRadio::after {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--green);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--green);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
-.realRadio:checked+.customRadio::after {
-    opacity: 1;
+.realRadio:checked + .customRadio::after {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .formContainer {
+    padding: 50px 40px 60px;
+  }
+
+  .formImg {
+    display: none;
+  }
+
+  .input,
+  .textarea,
+  .submitBtn {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .formContainer {
+    padding: 40px 20px 50px;
+    border-radius: 30px;
+  }
+
+  .radioContainer {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input,
+  .textarea {
+    padding: 16px 20px;
+  }
+
+  .textarea {
+    height: 150px;
+  }
+
+  .submitBtn {
+    padding: 16px 28px;
+    font-size: 18px;
+  }
 }

@@ -1,38 +1,38 @@
 .linkList {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px 0;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px 0;
+  justify-items: center;
 }
 
 .logoNetflixIcon {
-    fill: rgb(50, 50, 50);
-    transition: fill 200ms linear;
+  fill: rgb(50, 50, 50);
+  transition: fill 200ms linear;
 }
 
 .logoNetflixIcon:hover,
 .logoNetflixIcon:focus {
-    fill: red;
+  fill: red;
 }
 
 .logoZoomIcon {
-    fill: rgb(50, 50, 50);
-    transition: fill 200ms linear;
+  fill: rgb(50, 50, 50);
+  transition: fill 200ms linear;
 }
 
 .logoZoomIcon:hover,
 .logoZoomIcon:focus {
-    fill: blue;
+  fill: blue;
 }
 
 @media only screen and (max-width: 1024px) {
-    .linkList {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .linkList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media only screen and (max-width: 768px) {
-    .linkList {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media only screen and (max-width: 767px) {
+  .linkList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

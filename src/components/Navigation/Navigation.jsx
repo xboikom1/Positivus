@@ -6,7 +6,7 @@ import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   useEffect(() => {
     if (!isMobile && isMenuOpen) {

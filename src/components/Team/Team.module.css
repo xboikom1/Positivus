@@ -81,7 +81,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .list {
     gap: 24px;
   }

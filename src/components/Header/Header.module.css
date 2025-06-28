@@ -1,95 +1,95 @@
 .headerContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .textContainer {
-    max-width: 532px;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+  max-width: 532px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 140%;
-    text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: left;
 }
 
 .title {
-    text-align: left;
+  text-align: left;
 }
 
 .bookBtn {
-    border-radius: 14px;
-    padding: 20px 35px;
-    width: 264px;
-    height: 68px;
-    background: var(--dark);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 140%;
-    text-align: center;
-    color: #fff;
-    transition: color 250ms linear;
+  border-radius: 14px;
+  padding: 20px 35px;
+  width: 264px;
+  height: 68px;
+  background: var(--dark);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+  transition: color 250ms linear;
 }
 
 .bookBtn:hover,
 .bookBtn:focus {
-    color: var(--green);
+  color: var(--green);
 }
 
 .image {
-    width: 520px;
-    height: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
+  width: 520px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
 }
 
 .bookBtnDesktop {
-    display: block;
+  display: block;
 }
 
 .bookBtnMobile {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-    .image {
-        width: 400px;
-    }
+  .image {
+    width: 400px;
+  }
 
-    .textContainer {
-        max-width: 400px;
-    }
+  .textContainer {
+    max-width: 400px;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-    .headerContainer {
-        flex-direction: column;
+@media only screen and (max-width: 767px) {
+  .headerContainer {
+    flex-direction: column;
 
-        gap: 30px;
-    }
+    gap: 30px;
+  }
 
-    .bookBtnDesktop {
-        display: none;
-    }
+  .bookBtnDesktop {
+    display: none;
+  }
 
-    .bookBtnMobile {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+  .bookBtnMobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-    .image {
-        width: 100%;
-    }
+  .image {
+    width: 100%;
+  }
 
-    .textContainer {
-        max-width: 100%;
-    }
+  .textContainer {
+    max-width: 100%;
+  }
 }

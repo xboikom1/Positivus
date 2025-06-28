@@ -1,115 +1,95 @@
 .title {
-    font-weight: 500;
-    background-color: var(--green);
-    border-radius: 7px;
-    padding: 0px 7px;
-    white-space: nowrap;
+  font-weight: 500;
+  background-color: var(--green);
+  border-radius: 7px;
+  padding: 0px 7px;
+  white-space: nowrap;
 }
 
 .titleText {
-    display: block;
-    max-width: 580px;
+  display: block;
+  max-width: 580px;
 }
 
 .list {
-    display: flex;
-    justify-content: center;
-    gap: 128px;
-    background-color: var(--dark);
-    border-radius: 45px;
-    padding: 70px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+  background-color: var(--dark);
+  border-radius: 45px;
+  padding: 70px 60px;
 }
 
 .listItem {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
 }
 
 .listItem::after {
-    content: "";
-    display: block;
-    border: 1px solid #fff;
-    width: 0;
-    height: 100%;
-    left: 100%;
-    position: absolute;
-    margin-left: 64px;
+  content: '';
+  display: block;
+  border: 1px solid #fff;
+  width: 0;
+  height: 100%;
+  left: 100%;
+  position: absolute;
+  margin-left: 64px;
 }
 
 .listItem:last-child::after {
-    display: none;
+  display: none;
 }
 
 .listItemText {
-    color: white;
+  color: white;
 }
 
 .link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 132px;
 }
 
 .linkText {
-    color: var(--green);
+  color: var(--green);
 }
 
 .arrowIcon {
-    fill: var(--green);
-}
-
-
-.mobileContainer {
-    width: 100%;
-}
-
-.mobileSwiper {
-    width: 100%;
-    padding-bottom: 40px;
-}
-
-.mobileSwiper .listItem::after {
-    display: none;
-}
-
-.swiperBullet {
-    width: 12px;
-    height: 12px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.swiperBulletActive {
-    background-color: var(--green);
+  fill: var(--green);
 }
 
 @media only screen and (max-width: 1024px) {
-    .list {
-        gap: 108px;
-    }
+  .list {
+    gap: 108px;
+  }
 
-    .listItem::after {
-        margin-left: 54px;
-    }
+  .listItem::after {
+    margin-left: 54px;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-    .listItem {
-        background-color: var(--dark);
-        border-radius: 40px;
-        padding: 40px;
-    }
+@media only screen and (max-width: 767px) {
+  .list {
+    padding: 24px 8px;
+    gap: 24px;
+    border-radius: 18px;
+  }
 
-    .link {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 8px;
-    }
+  .titleText {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .listItem {
+    gap: 12px;
+  }
+
+  .link {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
 }
