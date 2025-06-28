@@ -1,14 +1,14 @@
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 .formContainer {
   border-radius: 45px;
   padding: 60px 00px 80px 100px;
   background: var(--grey);
   position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .inputsContainer {
@@ -111,7 +111,12 @@
 
 @media only screen and (max-width: 1024px) {
   .formContainer {
-    padding: 50px 40px 60px;
+    padding: 60px;
+  }
+
+  .form {
+    margin: 0 auto;
+    width: 90%;
   }
 
   .formImg {
@@ -121,25 +126,18 @@
   .input,
   .textarea,
   .submitBtn {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .formContainer {
-    padding: 40px 20px 50px;
+    padding: 40px;
     border-radius: 30px;
   }
 
-  .radioContainer {
-    gap: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .input,
-  .textarea {
-    padding: 16px 20px;
+  .form {
+    width: 100%;
   }
 
   .textarea {

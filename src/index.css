@@ -130,6 +130,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 32px;
+    text-align: center;
   }
 
   .section {
