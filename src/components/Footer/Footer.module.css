@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .navContainer {
@@ -70,6 +70,11 @@
   justify-content: space-between;
   position: relative;
   margin-bottom: 100px;
+  gap: 20px;
+}
+
+.contactsContainer .socialLinks {
+  display: none;
 }
 
 .contactsContainer::after {
@@ -109,9 +114,10 @@
 .form {
   display: flex;
   gap: 20px;
-  padding: 58px 40px;
+  padding: 58px 36px;
   border-radius: 14px;
   background-color: #292a32;
+  justify-content: space-between;
 }
 
 .input {
@@ -122,6 +128,7 @@
   background-color: #292a32;
   border-radius: 14px;
   padding: 22px 35px;
+  max-width: 293px;
 }
 
 .input::placeholder {
@@ -136,6 +143,10 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  font-weight: 400;
 }
 
 .copyrightBlock {
@@ -159,25 +170,44 @@
 @media only screen and (max-width: 1024px) {
   .footer {
     padding: 40px 30px;
-    border-radius: 30px 30px 0 0;
   }
 
   .navContainer {
+    flex-direction: column;
+    gap: 28px;
     margin-bottom: 50px;
+  }
+
+  .navList {
+    gap: 40px;
   }
 
   .contactsContainer {
     margin-bottom: 60px;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .contactsHeader {
+    font-size: 28px;
+    text-align: center;
+    margin: 0 auto 27px;
   }
 
   .form {
-    padding: 40px 30px;
+    padding: 40px;
+    max-width: 100%;
+  }
+
+  .input {
+    max-width: 100%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .footer {
-    padding: 30px 20px;
+    padding: 30px;
   }
 
   .navContainer {
@@ -186,25 +216,45 @@
     margin-bottom: 40px;
   }
 
+  .navContainer .socialLinks {
+    display: none;
+  }
+
+  .navLink {
+    padding: 0 20px;
+  }
+
   .navList {
     flex-direction: column;
-    gap: 20px;
   }
 
   .contactsContainer {
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+  }
+
+  .contactsContainer .socialLinks {
+    display: flex;
+    justify-content: center;
   }
 
   .form {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px;
+  }
+
+  .contactsContainer::after {
+    bottom: -40px;
   }
 
   .copyrightBlock {
     flex-direction: column;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .submitBtn {
+    width: 100%;
   }
 }

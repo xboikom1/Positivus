@@ -118,7 +118,7 @@ const Footer = () => {
         </ul>
       </nav>
       <div className={css.contactsContainer}>
-        <div>
+        <div className={css.contactInfo}>
           <h4 className={css.contactsHeader}>Contact us:</h4>
           <address className={css.addressContainer}>
             <p className={css.adressInfo}>
@@ -153,6 +153,44 @@ const Footer = () => {
             </button>
           </Form>
         </Formik>
+
+        <ul className={css.socialLinks}>
+          <a
+            className={css.iconLink}
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="15px" height="15px" aria-label="linkedin icon">
+              <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            className={css.iconLink}
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              className={css.icon}
+              width="30px"
+              height="30px"
+              aria-label="facebook icon"
+            >
+              <use href="/src/images/icons/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a
+            className={css.iconLink}
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="18px" height="15px" aria-label="twitter icon">
+              <use href="/src/images/icons/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </ul>
       </div>
       <div className={css.copyrightBlock}>
         <p className={css.copyrightInfo}>
