@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import css from './Contact form.module.css';
 import { Form, Formik, Field } from 'formik';
+import toast from 'react-hot-toast';
 
 const Contact_Form = () => {
   const initialValues = {
@@ -14,6 +15,7 @@ const Contact_Form = () => {
 
   const handleSubmit = (values, actions) => {
     actions.resetForm();
+    toast.success('Message sent successfully!');
   };
 
   return (

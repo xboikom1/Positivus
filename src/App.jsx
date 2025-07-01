@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import Case_Studies from './components/Case Studies/Case Studies';
 import ContactUs from './components/Contact us/Contact us';
 import CTA_block from './components/CTA Block/CTA block';
@@ -26,6 +27,22 @@ const App = () => {
       <footer>
         <Footer />
       </footer>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 2000,
+          style: {
+            background: 'var(--dark)',
+            color: '#fff',
+          },
+          success: {
+            iconTheme: {
+              primary: 'var(--green)',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
     </div>
   );
 };

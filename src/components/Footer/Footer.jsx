@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import css from './Footer.module.css';
 import { Form, Formik, Field } from 'formik';
+import toast from 'react-hot-toast';
 
 const Footer = () => {
   const initialValues = {
@@ -9,6 +10,7 @@ const Footer = () => {
 
   const handleSubmit = (values, actions) => {
     actions.resetForm();
+    toast.success('Subscribed successfully!');
   };
 
   const handleNavLinkClick = e => {
