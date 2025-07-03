@@ -1,32 +1,20 @@
+import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Loader from './components/Loader';
 import { Toaster } from 'react-hot-toast';
-import Case_Studies from './components/Case Studies/Case Studies';
-import ContactUs from './components/Contact us/Contact us';
-import CTA_block from './components/CTA Block/CTA block';
-import Footer from './components/Footer/Footer';
-import Hero from './components/Hero/Hero';
-import Services from './components/Services/Services';
-import Team from './components/Team/Team';
-import Testimonials from './components/Testimonials/Testimonials';
-import Working_Process from './components/Working Process/Working Process';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+const HomePage = lazy(() => import('./pages/Homepage/Homepage'));
 
 const App = () => {
   return (
-    <div className="pageContainer">
-      <header>
-        <Hero />
-      </header>
-      <main>
-        <Services />
-        <CTA_block />
-        <Case_Studies />
-        <Working_Process />
-        <Team />
-        <Testimonials />
-        <ContactUs />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+    <>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+
       <Toaster
         position="top-center"
         toastOptions={{
@@ -43,7 +31,7 @@ const App = () => {
           },
         }}
       />
-    </div>
+    </>
   );
 };
 

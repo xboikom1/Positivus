@@ -10,6 +10,13 @@ const Loader = () => {
       wrapperClass="magnifying-glass-wrapper"
       glassColor="#c0efff"
       color="black"
+      wrapperStyle={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '60vh',
+        margin: 'auto',
+      }}
     />
   );
 };
