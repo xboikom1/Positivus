@@ -52,7 +52,7 @@ const Navigation = () => {
     <nav className={css.navContainer}>
       <a className={css.logo} href="./index.html">
         <svg width="36px" height="36px" aria-label="Positivus logo">
-          <use href="/src/images/icons/sprite.svg#icon-star"></use>
+          <use href="/images/icons/sprite.svg#icon-star"></use>
         </svg>
         <h2 className={css.logoText}>Positivus</h2>
       </a>

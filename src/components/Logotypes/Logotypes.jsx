@@ -16,7 +16,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Amazon logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-amazon"></use>
+            <use href="/images/icons/sprite.svg#icon-amazon"></use>
           </svg>
         </a>
       </li>
@@ -33,7 +33,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Dribble logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-dribble"></use>
+            <use href="/images/icons/sprite.svg#icon-dribble"></use>
           </svg>
         </a>
       </li>
@@ -50,7 +50,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Hubspot logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-hubspot"></use>
+            <use href="/images/icons/sprite.svg#icon-hubspot"></use>
           </svg>
         </a>
       </li>
@@ -67,7 +67,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Notion logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-notion"></use>
+            <use href="/images/icons/sprite.svg#icon-notion"></use>
           </svg>
         </a>
       </li>
@@ -84,7 +84,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Netflix logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-netflix"></use>
+            <use href="/images/icons/sprite.svg#icon-netflix"></use>
           </svg>
         </a>
       </li>
@@ -101,7 +101,7 @@ const Logotypes = () => {
             height="48px"
             aria-label="Zoom logo"
           >
-            <use href="/src/images/icons/sprite.svg#icon-zoom"></use>
+            <use href="/images/icons/sprite.svg#icon-zoom"></use>
           </svg>
         </a>
       </li>

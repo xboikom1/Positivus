@@ -30,7 +30,7 @@ const TestimonialsSwiper = () => {
           renderBullet: (index, className) => {
             return `<div class="${className}">
                 <svg class="customBulletIcon" aria-label="star icon">
-                  <use href="/src/images/icons/sprite.svg#icon-star"></use>
+                  <use href="/images/icons/sprite.svg#icon-star"></use>
                 </svg>
               </div>`;
           },
@@ -40,7 +40,7 @@ const TestimonialsSwiper = () => {
         <SwiperSlide className={css.swiperSlide}>
           {!isMobile && (
             <svg className={css.bubbleIcon} aria-label="message icon">
-              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+              <use href="/images/icons/sprite.svg#icon-bubble"></use>
             </svg>
           )}
           <p className={css.bubbleText}>
@@ -57,7 +57,7 @@ const TestimonialsSwiper = () => {
         <SwiperSlide className={css.swiperSlide}>
           {!isMobile && (
             <svg className={css.bubbleIcon} aria-label="message icon">
-              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+              <use href="/images/icons/sprite.svg#icon-bubble"></use>
             </svg>
           )}
           <p className={css.bubbleText}>
@@ -73,7 +73,7 @@ const TestimonialsSwiper = () => {
         <SwiperSlide className={css.swiperSlide}>
           {!isMobile && (
             <svg className={css.bubbleIcon} aria-label="message icon">
-              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+              <use href="/images/icons/sprite.svg#icon-bubble"></use>
             </svg>
           )}
           <p className={css.bubbleText}>
@@ -89,7 +89,7 @@ const TestimonialsSwiper = () => {
         <SwiperSlide className={css.swiperSlide}>
           {!isMobile && (
             <svg className={css.bubbleIcon} aria-label="message icon">
-              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+              <use href="/images/icons/sprite.svg#icon-bubble"></use>
             </svg>
           )}
           <p className={css.bubbleText}>
@@ -107,7 +107,7 @@ const TestimonialsSwiper = () => {
         <SwiperSlide className={css.swiperSlide}>
           {!isMobile && (
             <svg className={css.bubbleIcon} aria-label="message icon">
-              <use href="/src/images/icons/sprite.svg#icon-bubble"></use>
+              <use href="/images/icons/sprite.svg#icon-bubble"></use>
             </svg>
           )}
           <p className={css.bubbleText}>
@@ -122,10 +122,10 @@ const TestimonialsSwiper = () => {
         </SwiperSlide>
       </Swiper>
       <svg className={css.swiperButtonPrev} aria-label="prev button">
-        <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
+        <use href="/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
       <svg className={css.swiperButtonNext} aria-label="next button">
-        <use href="/src/images/icons/sprite.svg#icon-Arrow-right"></use>
+        <use href="/images/icons/sprite.svg#icon-Arrow-right"></use>
       </svg>
 
       <div className={css.customPagination}></div>

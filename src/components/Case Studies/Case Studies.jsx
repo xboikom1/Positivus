@@ -34,7 +34,7 @@ const Case_Studies = () => {
           height="20px"
           aria-label="Arrow icon"
         >
-          <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+          <use href="/images/icons/sprite.svg#icon-Arrow"></use>
         </svg>
       </a>
     </div>

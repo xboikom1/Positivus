@@ -14,7 +14,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_1.png"
+              src="/images/team-images/card_1.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -33,7 +33,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>
@@ -46,7 +46,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_2.png"
+              src="/images/team-images/card_2.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -65,7 +65,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>
@@ -77,7 +77,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_3.png"
+              src="/images/team-images/card_3.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -96,7 +96,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>
@@ -108,7 +108,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_4.png"
+              src="/images/team-images/card_4.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -127,7 +127,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>
@@ -139,7 +139,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_5.png"
+              src="/images/team-images/card_5.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -158,7 +158,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>
@@ -171,7 +171,7 @@ const Team = () => {
         <li className={css.listItem}>
           <div className={css.personInfoContainer}>
             <img
-              src="/src/images/team-images/card_6.png"
+              src="/images/team-images/card_6.png"
               alt="Team person photo"
             />
             <div className={css.pesronInfo}>
@@ -189,7 +189,7 @@ const Team = () => {
                 height="18px"
                 aria-label="linkedin icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+                <use href="/images/icons/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </div>

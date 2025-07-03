@@ -13,11 +13,11 @@ const ExpandIcon = ({ expanded }) => {
     <SvgIcon>
       {expanded ? (
         <svg aria-label="close icon" className={css.svgIcon}>
-          <use href="/src/images/icons/sprite.svg#icon-minus"></use>
+          <use href="/images/icons/sprite.svg#icon-minus"></use>
         </svg>
       ) : (
         <svg aria-label="open icon" className={css.svgIcon}>
-          <use href="/src/images/icons/sprite.svg#icon-plus"></use>
+          <use href="/images/icons/sprite.svg#icon-plus"></use>
         </svg>
       )}
     </SvgIcon>

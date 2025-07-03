@@ -86,7 +86,7 @@ const Contact_Form = () => {
         </Form>
       </Formik>
       <img
-        src="/src/images/contact-us-image.png"
+        src="/images/contact-us-image.png"
         className={css.formImg}
         alt="Decorative image"
       />

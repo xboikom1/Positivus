@@ -30,7 +30,7 @@ const Footer = () => {
       <nav className={css.navContainer}>
         <a className={css.logo} href="./index.html">
           <svg width="36px" height="36px" aria-label="Positivus logo">
-            <use href="/src/images/icons/sprite.svg#icon-star"></use>
+            <use href="/images/icons/sprite.svg#icon-star"></use>
           </svg>
           <h2 className={css.logoText}>Positivus</h2>
         </a>
@@ -89,7 +89,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <svg width="15px" height="15px" aria-label="linkedin icon">
-              <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+              <use href="/images/icons/sprite.svg#icon-linkedin"></use>
             </svg>
           </a>
           <a
@@ -104,7 +104,7 @@ const Footer = () => {
               height="30px"
               aria-label="facebook icon"
             >
-              <use href="/src/images/icons/sprite.svg#icon-facebook"></use>
+              <use href="/images/icons/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
           <a
@@ -114,7 +114,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <svg width="18px" height="15px" aria-label="twitter icon">
-              <use href="/src/images/icons/sprite.svg#icon-twitter"></use>
+              <use href="/images/icons/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </ul>
@@ -164,7 +164,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <svg width="15px" height="15px" aria-label="linkedin icon">
-              <use href="/src/images/icons/sprite.svg#icon-linkedin"></use>
+              <use href="/images/icons/sprite.svg#icon-linkedin"></use>
             </svg>
           </a>
           <a
@@ -179,7 +179,7 @@ const Footer = () => {
               height="30px"
               aria-label="facebook icon"
             >
-              <use href="/src/images/icons/sprite.svg#icon-facebook"></use>
+              <use href="/images/icons/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
           <a
@@ -189,7 +189,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <svg width="18px" height="15px" aria-label="twitter icon">
-              <use href="/src/images/icons/sprite.svg#icon-twitter"></use>
+              <use href="/images/icons/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </ul>

@@ -33,7 +33,7 @@ const Header = () => {
         </button>
       </div>
       <img
-        src="/src/images/header-image.png"
+        src="/images/header-image.png"
         alt="Decoration image"
         className={css.image}
       />

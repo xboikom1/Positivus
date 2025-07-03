@@ -24,14 +24,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p className={css.cardLinkText}>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-1.png"
+            src="/images/services-images/card-1.png"
             alt="Engine optimization illustration"
           />
         </li>
@@ -48,14 +48,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-2.png"
+            src="/images/services-images/card-2.png"
             alt="Pay-per-click illustration"
           />
         </li>
@@ -72,14 +72,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p className={css.linkText}>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-3.png"
+            src="/images/services-images/card-3.png"
             alt="Social Media Marketing illustration"
           />
         </li>
@@ -96,14 +96,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-4.png"
+            src="/images/services-images/card-4.png"
             alt="Email Marketing illustration"
           />
         </li>
@@ -120,14 +120,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-5.png"
+            src="/images/services-images/card-5.png"
             alt="Content creation illustration"
           />
         </li>
@@ -144,14 +144,14 @@ const Services = () => {
                 height="42px"
                 aria-label="Arrow icon"
               >
-                <use href="/src/images/icons/sprite.svg#icon-Arrow"></use>
+                <use href="/images/icons/sprite.svg#icon-Arrow"></use>
               </svg>
               <p className={css.linkText}>Learn more</p>
             </a>
           </div>
           <img
             className={css.cardImg}
-            src="/src/images/services-images/card-6.png"
+            src="/images/services-images/card-6.png"
             alt="Analytics and Tracking illustration"
           />
         </li>

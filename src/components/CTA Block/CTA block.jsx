@@ -26,7 +26,7 @@ const CTA_block = () => {
         </button>
       </div>
       <img
-        src="/src/images/CTA-image.png"
+        src="/images/CTA-image.png"
         alt="Decorative image"
         className={css.image}
       />
