@@ -1,9 +1,25 @@
 import { useId } from 'react';
 import css from './Contact form.module.css';
-import { Form, Formik, Field } from 'formik';
+import { Form, Formik, Field, ErrorMessage } from 'formik';
 import toast from 'react-hot-toast';
+import * as Yup from 'yup';
 
 const Contact_Form = () => {
+  const validationSchema = Yup.object().shape({
+    username: Yup.string()
+      .min(2, 'Name must be at least 2 characters')
+      .max(50, 'Name must not exceed 50 characters'),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Email is required'),
+    message: Yup.string()
+      .min(5, 'Message must be at least 5 characters')
+      .required('Message is required'),
+    intention: Yup.string()
+      .oneOf(['greeting', 'quote'], 'Invalid intention')
+      .required('Intention is required'),
+  });
+
   const initialValues = {
     username: '',
     email: '',
@@ -20,7 +36,11 @@ const Contact_Form = () => {
 
   return (
     <div className={css.formContainer}>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={validationSchema}
+      >
         <Form className={css.form}>
           <div className={css.radioContainer}>
             <label className={css.radioLabel}>
@@ -43,6 +63,11 @@ const Contact_Form = () => {
               <span className={css.customRadio} />
               Get a Quote
             </label>
+            <ErrorMessage
+              name="intention"
+              component="span"
+              className={css.errorMessage}
+            />
           </div>
 
           <div className={css.inputsContainer}>
@@ -55,6 +80,11 @@ const Contact_Form = () => {
                 className={css.input}
                 id={`${id} username`}
               />
+              <ErrorMessage
+                name="username"
+                component="span"
+                className={css.errorMessage}
+              />
             </div>
             <div className={css.labelContainer}>
               <label htmlFor={`${id} email`}>Email*</label>
@@ -64,7 +94,11 @@ const Contact_Form = () => {
                 placeholder="Email"
                 className={css.input}
                 id={`${id} email`}
-                required
+              />
+              <ErrorMessage
+                name="email"
+                component="span"
+                className={css.errorMessage}
               />
             </div>
             <div className={css.labelContainer}>
@@ -74,8 +108,12 @@ const Contact_Form = () => {
                 name="message"
                 placeholder="Message"
                 id={`${id} message`}
-                required
                 className={css.textarea}
+              />
+              <ErrorMessage
+                name="message"
+                component="span"
+                className={css.errorMessage}
               />
             </div>
           </div>

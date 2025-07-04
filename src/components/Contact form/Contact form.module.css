@@ -109,6 +109,12 @@
   opacity: 1;
 }
 
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 1024px) {
   .formContainer {
     padding: 60px;
