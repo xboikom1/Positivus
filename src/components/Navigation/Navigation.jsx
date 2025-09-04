@@ -50,7 +50,7 @@ const Navigation = () => {
 
   return (
     <nav className={css.navContainer}>
-      <a className={css.logo} href="./index.html">
+      <a className={css.logo} href="/">
         <svg width="36px" height="36px" aria-label="Positivus logo">
           <use href="/images/icons/sprite.svg#icon-star"></use>
         </svg>
